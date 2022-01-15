@@ -1,7 +1,9 @@
-/* Fonts */
+/* ------------------Font---------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-/* common margin padding for whole website */
+/* -------------------------------------------------
+        common margin padding for whole website 
+----------------------------------------------------*/
 *{
     margin: 0;
     padding:0;
@@ -9,10 +11,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* nav bar styles */
+/*------------------
+    nav bar styles 
+---------------------*/
 .influencer-header{
     width: 90%;
     margin-top: 50px;
+    margin-bottom: -100px;
 }
 
 .nav-title{
@@ -39,10 +44,13 @@
     align-items: center;
 }
 
-/* main part styling */
+/*-----------------------
+    main part styling
+------------------------- */
  .container{
     max-width: 1200px;
     margin: 0 auto;
+ 
 }
 
 .banner{
@@ -67,6 +75,11 @@
     display: flex;
     align-items: center;
 }
+
+.banner-left:hover{
+    transition: 2s;
+    transform:scale(1.5)
+}
 .banner-right{
     
     flex: 1;
@@ -88,7 +101,9 @@
     margin-left: 10px;
 }
 
-/* online shop styling */
+/*----------------
+ online shop styling 
+ ----------------*/
  
 .shops{
     display: flex;
@@ -104,7 +119,9 @@
     margin-right: 50px;
 }
 
-/* popular collection styling */
+/*----------------------------------
+    popular collection styling 
+------------------------------------*/
 
 .top-title{
     text-align: center;
@@ -146,8 +163,115 @@
 
 .down-text{
     text-align: right;
-    margin-right: 90px;
+    margin-right: 72px;
     margin-top: 40px;
     color: #E02C6D;
     cursor: pointer;
 }
+
+
+/*-------------------------
+        contact us part
+--------------------------- */
+
+.contact-us{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 50px;
+
+}
+.form{
+    margin-right: 70px;
+    
+}
+.form-title{
+    text-align:center;
+    margin-bottom:20px;
+}
+#area{
+    height:90px;
+}
+.input-style{
+    padding: 5px;
+    width: 500px;
+    border-radius: 15px;
+    border: 2px solid gray;
+    background-color: #F2F6F8;
+    border:none;
+
+}
+
+
+/*-------------------------
+       footer part styling
+--------------------------- */
+
+footer{
+    height: 200px;
+    padding:40px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logos{
+    margin-top: 20px;
+    font-size:25px
+}
+
+/*------------------------------
+    media query for mobile part 
+--------------------------------*/
+
+@media only screen and (max-width: 576px) {
+   .banner{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+    .right-nav{
+        display:none;
+    }
+    .banner-left{
+        width:50%;
+    }
+    .banner-left h1{
+        font-size: 20px;
+        margin-top: 90px;
+    }
+    .shops{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    .all-collections{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 auto;
+    text-align: center;
+}
+    .contact-us{
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+}
+
+
+/*-------------------------------
+    media query for tablet part
+ -------------------------------- */
+
+@media (min-width: 577px) and (max-width: 768px){ 
+    .all-collections{
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+         margin: 0 auto;
+         text-align: center;
+    }     
+}
+
+
+ 
